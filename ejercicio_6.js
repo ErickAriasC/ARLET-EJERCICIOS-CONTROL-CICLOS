@@ -28,7 +28,7 @@ console.log(`CANTIDAD:${cantidad}`);
 
 //VALIDACION SALSA 
 // let salsa=prompt("¿Desea agregar salsa?\nEscoja 1.Si 2.No")
-let salsa=2;
+let salsa=1;
 // mostrar salsa
 if (salsa==1) {
     console.log("SALSA: SI");

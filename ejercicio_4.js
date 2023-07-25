@@ -43,23 +43,23 @@ console.log("N°PRENDAS:"+numeroPrendas);
 let costo=0;
 //En lavados
 //lavado en seco
-function seco() {
+function calcularCostoSeco() {
     costo=numeroPrendas*2000;
-    console.log("TIPO LAVADO:Seco \nVALOR FINAL:"+costo);
+    return "TIPO LAVADO:Seco \nVALOR FINAL:"+costo;
 }
 // lavado normal
-function normal() {
+function calcularCostoNormal() {
     costo=numeroPrendas*1500;
-    console.log("TIPO LAVADO:Normal \nVALOR FINAL:"+costo);
+    return"TIPO LAVADO:Normal \nVALOR FINAL:"+costo;
 }
 
 //En planchado
-function planchado() {
+function calcularCostoPlanchado() {
     costo=numeroPrendas*1800;
     if (domicilio==1) {
         costo=costo+3000;
     }
-    console.log("VALOR FINAL:"+costo);
+    return"VALOR FINAL:"+costo;
 }
 
 //VALIDACION TIPOS DE SERVICIO
@@ -69,14 +69,14 @@ if (tipoServicio==1) {
     // ***tipoLavado=prompt("escoja el tipo de lavado"+"presione 1.Seco 2.Normal")
     tipoLavado=1
     if (tipoLavado==1) {
-        seco();
+        console.log(calcularCostoSeco()); 
         showTipoLavado="Seco"
     } else if (tipoLavado==2){
         showTipoLavado="Normal"
-        normal();
+        console.log(calcularCostoNormal());
     }
 }else if(tipoServicio==2){
-    planchado();
+    console.log(calcularCostoPlanchado());
 }
 
 

@@ -11,16 +11,16 @@ let referenciaCarro=0;
 
 switch (marcaCarro) {
     case 1:
-        referenciaCarroD();
+        identificarReferenciaCarro();
         alert(`MARCA: CHEVROLET\nREFERENCIA: ${referenciaCarro}`)
         break;
     case 2:
-        referenciaCarroD();
+        identificarReferenciaCarro();
         alert(`MARCA: MAZDA\nREFERENCIA: ${referenciaCarro}`)
 
         break;
     case 3:
-        referenciaCarroD();
+        identificarReferenciaCarro();
         alert(`MARCA: RENAULT\nREFERENCIA: ${referenciaCarro}`)
 
         break;
@@ -29,7 +29,7 @@ switch (marcaCarro) {
         break;
 }
 
-function referenciaCarroD() {
+function identificarReferenciaCarro() {
     referenciaCarro=Number(prompt(`SELECCIONE EL NUMERO QUE CORRESPONDE A LA REFENCIA QUE DESEA ESCOGER\n1. Captiva 2. Traaker`))
     if (referenciaCarro==1) {
         referenciaCarro="Captiva";

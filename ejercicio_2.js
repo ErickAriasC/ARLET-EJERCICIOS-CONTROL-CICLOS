@@ -2,7 +2,7 @@
 // 1 al 6 sin imprimir el número 5, usando ciclos
 
 
-function number() {
+function imprimirNumbers() {
     for (let i = 1; i <=6; i++) {
         //condicion para que no imprima el 5 
         // console.log(`${i}`);
@@ -14,4 +14,4 @@ function number() {
     }
 }
 
-number();
+imprimirNumbers();

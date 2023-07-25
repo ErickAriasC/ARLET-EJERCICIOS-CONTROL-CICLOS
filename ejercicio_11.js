@@ -13,49 +13,49 @@ let tipoPago=2;
 // mostrar tipo de pago
 if (tipoPago==1) {
     console.log("TIPO DE PAGO: Moneda");
-    pagoMoneda();
-    costo();
+    console-log(ingresarMoneda());
+    console.log(calcularDevoluciones());
 } else if (tipoPago==2){
     console.log("TIPO DE PAGO: Billete");
-    pagoBillete();
-    costo();
+    console-log(ingresarBillete());
+    console.log(calcularDevoluciones());
 }
 
 //acciones segun el tipo de pago 
 //MONEDA
-function pagoMoneda() {
+function ingresarMoneda() {
     // let moneda=prompt("Escoja la moneda a ingresar\n"+"1. 500 2. 1000");
     let moneda=2;
     if (moneda==1){
         devoluciones=500;
-        console.log(`Has ingresado: ${devoluciones}`);
+        return`Has ingresado: ${devoluciones}`;
     }else if(moneda==2){
         devoluciones=1000;
-        console.log(`Has ingresado: ${devoluciones}`);
+        return`Has ingresado: ${devoluciones}`;
     }    
 }
 
 //BILLETE
-function pagoBillete() {
+function ingresarBillete() {
     // let billete=prompt("Escoja el billete a ingresar\n"+"1. 2000 2. 5000");
     let billete=2;
     if (billete==1){
         devoluciones=2000;
-        console.log(`Has ingresado: ${devoluciones}`);
+        return `Has ingresado: ${devoluciones}`;
     }else if(billete==2){
         devoluciones=5000;
-        console.log(`Has ingresado: ${devoluciones}`);
+        return `Has ingresado: ${devoluciones}`;
     }   
 }
 
 //VALIDACION SERVICIO
-//costo servicio
-function costo() {
+//calcularDevoluciones servicio
+function calcularDevoluciones() {
     devoluciones=devoluciones-costoServicio;
     if (devoluciones==0) {
-        console.log("DEVOLUCIÓN: Sin devolución");
+        return "DEVOLUCIÓN: Sin devolución";
     } else{
-        console.log(`DEVOLUCION: ${devoluciones}`);
+        return `DEVOLUCION: ${devoluciones}`;
     }
 }
 //mesaje final
